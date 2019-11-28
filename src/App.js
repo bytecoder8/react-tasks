@@ -8,21 +8,21 @@ import Modal from './components/Modal/Modal';
 
 function App() {
   const [todos, setTodos] = useState([
-    // {id: 1, completed: false, title: 'Купить хлеб'},
-    // {id: 2, completed: true, title: 'Купить масло'},
-    // {id: 3, completed: false, title: 'Купить молоко'}
+    {id: 1, completed: false, title: 'Купить хлеб'},
+    {id: 2, completed: true, title: 'Купить масло'},
+    {id: 3, completed: false, title: 'Купить молоко'}
   ])
   const [lastId, setLastId] = useState(3)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
-    // fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
-    // .then(response => response.json())
-    // .then(json => {
-    //   setTodos(json)
-    //   setLoading(false)
-    // })
-    // setLoading(true)
+    fetch('https://jsonplaceholder.typicode.com/todos?_limit=5')
+    .then(response => response.json())
+    .then(json => {
+      setTodos(json)
+      setLoading(false)
+    })
+    setLoading(true)
   }, [])
 
   const toggleItem = (id) => {
@@ -45,7 +45,6 @@ function App() {
       title,
       completed: false
     }])
-    console.log('add', id)
   }
 
   return (
