@@ -1,0 +1,35 @@
+.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: .5rem;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+.checkbox {
+    margin-right: 1rem;
+}
+
+.button-close {
+    color: #fff;
+    border: none;
+    background-color: orangered;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-form {
+    margin-bottom: 1rem;
+}
