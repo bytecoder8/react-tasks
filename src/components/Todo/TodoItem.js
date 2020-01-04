@@ -15,12 +15,14 @@ function TodoItem({ item, index, handleToggle }) {
     return (
         <li className={styles.item}>
             <span className={classes.join(' ')}>
-                <input type="checkbox" 
-                    className={styles['checkbox']}
-                    checked={item.completed ? 'checked' : ''}
-                    onChange={ () => handleToggle(item.id) } />
-                <strong> {index + 1}</strong>&nbsp;
-                { item.title }
+                <label>
+                    <input type="checkbox" 
+                        className={styles['checkbox']}
+                        checked={item.completed ? 'checked' : ''}
+                        onChange={ () => handleToggle(item.id) } />
+                    <strong> {index + 1}</strong>&nbsp;
+                    { item.title }
+                </label>
             </span>
             <button className={styles['button-close']} onClick={() => removeTodo(item.id)}>&times;</button>
         </li>
